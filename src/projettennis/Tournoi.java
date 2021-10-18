@@ -18,7 +18,7 @@ public class Tournoi {
     
     public static void ListeJoueur(int NbrJoueur, String AdrFile) throws FileNotFoundException, IOException{
       
-        
+    int variable = 1; 
     File file = new File(AdrFile);
     FileReader fr = new FileReader(file);
     BufferedReader br = new BufferedReader(fr);
@@ -37,6 +37,7 @@ public class Tournoi {
         
         for (int i=1; i<=NbrJoueur; i++){
              Player[i-1] = new Joueur();
+             
              
              /*
              Player[i-1].bras=
