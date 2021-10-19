@@ -9,6 +9,9 @@ import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.ArrayList;
+
 
 /**
  *
@@ -42,6 +45,7 @@ public class Tournoi {
     
     public static void AffichageQualif(String TabQualif[], int NbrJoueur){
         for (int i=0; i<NbrJoueur; i++){
+            
            System.out.println("Joueur numero "+(i+1)+" qualifié = "+ TabQualif[i]);
        }
         System.out.println("\n");
@@ -54,15 +58,24 @@ public class Tournoi {
     
     
        public static void CompoMatch(String TabQualif[]){
-       int a;
-       a=TabQualif.length;
-       int n=1;
-        for (int i=0; i<a-1;i++){
-            System.out.println("Match"+n+" :"+TabQualif[i]+" VS "+TabQualif[i+1]);
-            n++;i++;
+           
+        ArrayList numbers = new ArrayList();
+        int NbrQualif=TabQualif.length;
+        for (int i=0; i<=NbrQualif-1; i++){
+            numbers.add(i);
         }
-   }
-    
+        Collections.shuffle(numbers);
+        int n=1;
+        for (int k=0; k<NbrQualif-1; k++){
+            System.out.println(numbers.get(k));
+            System.out.println("Match n*"+n+" :"+(TabQualif[(int) numbers.get(k)])+" VS "+(TabQualif[(int) numbers.get(k+1)]));
+            k++;
+       
+              
+            }
+       }
 }
+    
+
     
 

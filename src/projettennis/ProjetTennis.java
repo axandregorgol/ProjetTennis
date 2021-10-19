@@ -23,15 +23,14 @@ public class ProjetTennis {
        String AdrFileA="info-arbitre.txt";
                
        Joueur[] Player = new Joueur[NbrJoueur+1];     //<-- NOMBRE DE JOUEUR+1
-       String [] TabQualif= new String[NbrJoueur];
+       String [] TabQualif= new String[NbrJoueur];    // creation tableau pour nom des qualifiés
          
        Arbitre.ListeArbitre(NbrArbitre, AdrFileA);           //Récupération info arbitre + creation tableau arbitre
        Player = Joueur.ListeJoueur(AdrFileJ, Player);  //Récupération info Joueur + creation tableau Joueur (=Player[])
        
        TabQualif = Tournoi.ListeQualif(Player, TabQualif, NbrJoueur);       //Création Tableau des joueurs qualifiés à partir du tableau des joueurs + du parametre qualification
        Tournoi.AffichageQualif(TabQualif, NbrJoueur);                       // Affichage des joueurs qualifiés
-      
-       Tournoi.CompoMatch(TabQualif);
+       Tournoi.CompoMatch(TabQualif);                                   // Affiche les matchs (joueur(i)vsjoueur(i+1) avec i place du classement);
        
     }
     
