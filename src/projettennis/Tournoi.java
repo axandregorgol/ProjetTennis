@@ -12,10 +12,37 @@ import java.io.IOException;
 
 /**
  *
- * @author iPraz
+ * @author axand
  */
 public class Tournoi {
     
+    String lieu;
+    String surface;
+    int etape;
+    
+    public static String [] ListeQualif(Joueur Player[], String TabQualif[], int NbrJoueur){
+        int i=0;
+                for (int k=0; k<NbrJoueur; k++){                  
+            if (Player[k].qualification.equals("qualifie")){
+                TabQualif[i]=Player[k].prenom;
+                i++;
+               
+            }
+            
+        }
+                return TabQualif;
+    }
     
     
+    
+    public static void AffichageQualif(String TabQualif[], int NbrJoueur){
+        for (int i=0; i<NbrJoueur; i++){
+           System.out.println("Joueur numero "+(i+1)+" qualifié = "+ TabQualif[i]);
+       }
+    }
+  
+    
+         
 }
+    
+

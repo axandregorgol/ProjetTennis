@@ -11,9 +11,9 @@ package projettennis;
  */
 public class Personne {
         public String nomNaissance;
-        public  String dateNaissance;
+        public String dateNaissance;
         public String lieuNaissance;
-        public  String dateDeces;
+        public String dateDeces;
         public String genre;
         
         public String nomCourant;

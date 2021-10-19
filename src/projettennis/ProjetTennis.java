@@ -5,6 +5,7 @@
  */
 package projettennis;
 import java.io.IOException;
+import projettennis.Joueur;
 
 
 /**
@@ -13,22 +14,24 @@ import java.io.IOException;
  */
 public class ProjetTennis {
     
-
-   
     public static void main(String[] args) throws IOException {
         
-       int NbrJoueur = 128;
-       int NbrArbitre = 10;
        
+       int NbrArbitre = 10;
+       int NbrJoueur = 6;
        String AdrFileJ="info-joueur.txt";
        String AdrFileA="info-arbitre.txt";
+               
+       Joueur[] Player = new Joueur[NbrJoueur+1];     //<-- NOMBRE DE JOUEUR+1
+       String [] TabQualif= new String[NbrJoueur];
+         
+       Arbitre.ListeArbitre(NbrArbitre, AdrFileA);           //Récupération info arbitre + creation tableau arbitre
+       Player = Joueur.ListeJoueur(AdrFileJ, Player);  //Récupération info Joueur + creation tableau Joueur (=Player[])
        
-       Joueur.ListeJoueur(NbrJoueur, AdrFileJ );
-       Arbitre.ListeArbitre(NbrArbitre, AdrFileA);
+       TabQualif = Tournoi.ListeQualif(Player, TabQualif, NbrJoueur);       //Création Tableau des joueurs qualifiés à partir du tableau des joueurs + du parametre qualification
+       Tournoi.AffichageQualif(TabQualif, NbrJoueur);                       // Affichage des joueurs qualifiés
+      
        
-       Arbitre Axandre = new Arbitre();
-       Axandre.nomNaissance = "gorgol";
-       Axandre.faute();
     }
     
 }
