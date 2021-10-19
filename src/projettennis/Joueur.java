@@ -34,7 +34,7 @@ public class Joueur extends Personne{
             int l=1;
             int j=1;
             Player[j-1] = new Joueur();
-            System.out.println("Joueur"+j+":");
+            //System.out.println("Joueur"+j+":");
 
             while((line = br.readLine()) != null){
 
@@ -43,14 +43,14 @@ public class Joueur extends Personne{
                     l=0;
                     j=j+1;
                     System.out.println("\n");
-                    System.out.println("Joueur "+j+":");
+                //    System.out.println("Joueur "+j+":");
                     Player[j-1] = new Joueur();
                     
                 }
                 
                  switch(l){
 
-                    case 1 : Player[j-1].bras=line; System.out.println("bras = "+Player[j-1].bras);; break;
+                    case 1 : Player[j-1].bras=line; System.out.println("Joueur "+j+":"); System.out.println("bras = "+Player[j-1].bras);; break;
                     case 2 : Player[j-1].prenom=line;System.out.println("Prenom = "+Player[j-1].prenom); break;
                     case 3 : Player[j-1].entraineur=line; System.out.println("Entraineur = "+Player[j-1].entraineur);break;
                   /*case 4 : Player[j-1].nomNaissance= ;
@@ -67,7 +67,7 @@ public class Joueur extends Personne{
                 l=l+1;
            
               }
-            System.out.println("\n");
+            System.out.println("\n"); //<--- a mettre au dernier parametre case11 une fois fini
             fr.close();         
          return Player;
         } 

@@ -10,6 +10,7 @@ package projettennis;
  * @author axand
  */
 public class Personne {
+    
         public String nomNaissance;
         public String dateNaissance;
         public String lieuNaissance;
@@ -23,5 +24,4 @@ public class Personne {
         public int taille;
         public int poids;
         
-    
-}
+    }

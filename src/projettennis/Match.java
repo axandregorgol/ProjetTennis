@@ -11,6 +11,5 @@ package projettennis;
  */
 public class Match {
     
-   
-    
+
 }

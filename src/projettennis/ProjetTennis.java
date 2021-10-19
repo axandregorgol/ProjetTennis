@@ -31,6 +31,7 @@ public class ProjetTennis {
        TabQualif = Tournoi.ListeQualif(Player, TabQualif, NbrJoueur);       //Création Tableau des joueurs qualifiés à partir du tableau des joueurs + du parametre qualification
        Tournoi.AffichageQualif(TabQualif, NbrJoueur);                       // Affichage des joueurs qualifiés
       
+       Tournoi.CompoMatch(TabQualif);
        
     }
     
